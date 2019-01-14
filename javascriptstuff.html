@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add 7</title>
+    </head>
+<body>
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">add seven</button>
+<div></div>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let person = prompt("Please enter a number, we will add seven", "7");
+  let integer = parseInt(person, 10);
+    
+  let newDiv = document.createElement("div"); 
+  // and give it some content 
+  var newContent = document.createTextNode(`your number is now ${integer + 7}`); 
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);  
+
+  // add the newly created element and its content into the DOM 
+  var currentDiv = document.getElementById("div1"); 
+  document.body.insertBefore(newDiv, currentDiv); 
+
+}
+
+
+</script>
+
+</body>
+</html>
